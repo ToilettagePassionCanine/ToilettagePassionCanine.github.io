@@ -391,6 +391,14 @@ a.btn-white:focus {
     border-radius: 4px;
 }
 
+/* NAVBAR PHONE
+   ================================================== */
+
+.navbar-toggle.navbar-phone {
+  color: #fff;
+  padding: 7px 7px 6px 7px;
+}
+
 /* NAVBAR-DROPDOWN SECTION
    ================================================== */
 
