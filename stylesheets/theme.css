@@ -14,14 +14,20 @@ Description: Style-Layout
 #COLOR
 #NAV-BAR
 #HEADER TITLE-SUBTITLE
+
+=====SECTIONS=====
 #INTRO 
+#FEATURES 
+#IPHONE
 #SERVICES
 #IMAC
 #PORTFOLIO
 #PLANS
+#BLOG
 #QUOTE
 #TEAM
 #CONTACT
+#SUBSCRIBE
 #FOOTER
 #FOOTER-BOTTOM
 
@@ -124,14 +130,14 @@ a.btn-flat,
    ================================================== */
 
 a.btn-white {
-    background-color: #f7f7f7;
-    border: 2px solid #f7f7f7;
-    color: #535A6C;
     display: inline-block;
     padding: 20px 30px;
     text-transform: uppercase;
+    color: #FFF;
+    border: solid #FFF 2px;
     font-size: 16px;
     font-weight: 700;
+    background-color: transparent;
     -webkit-transition: all ease-in .15s;
     -moz-transition: all ease-in .15s;
     -o-transition: all ease-in .15s;
@@ -139,8 +145,9 @@ a.btn-white {
 }
 
 a.btn-white:hover {
-    border-color: #fff;
-    background-color: #fff;
+    background-color: #FFF;
+    border-color: #f7f7f7;
+    color: #535A6C;
 }
 
 a.btn-white:active,
@@ -252,11 +259,11 @@ a.btn-white:focus {
 
 @media (min-width:1200px) { 
 	.img-browser {
-	    width: 554px
+	    width: 652px
 	}
 
 	.col-browser li img {
-	    width: 554px
+	    width: 652px
 	}
 
 	.img-imac {
@@ -527,33 +534,18 @@ a.btn-white:focus {
 
 /* INTRO
    ================================================== */
-#hide-bar {
-    width: 100%;
-    position: fixed;
-    display: none;
-    top: 0;
-    z-index: 9000;
-}
+
 .bg-intro {
-    background-image: url(../images/background.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    -moz-background-size: cover;
-    background-size: cover;
-    min-height: 300px;
-    text-align: center;
-    padding-top: 90px;
+    padding-top: 180px
 }
 
 .title-intro {
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
     margin-top: 0;
-    color: #FFF;
+    color: #a1a9bb;
     font-size: 40px;
     font-weight: 800;
     margin-bottom: 14px;
-    letter-spacing: 1px;
+    letter-spacing: 0;
     animation-delay:1s;
     -webkit-animation-delay:1s;
 }
@@ -563,16 +555,13 @@ a.btn-white:focus {
     letter-spacing: 1px;
     color: #FFF;
     font-size: 19px;
+    margin-bottom: 14px;
     padding-bottom: 0;
-    margin:0 auto;
     margin-bottom: 20px;
     font-weight: 300;
-    max-width:550px;
+    margin-top: 0;
     animation-delay:1.5s;
     -webkit-animation-delay:1.5s;
-}
-.row-intro .btn-white {
-    margin-bottom:36px;
 }
 
 .row-intro .btn-delay {
@@ -586,56 +575,218 @@ a.btn-white:focus {
 }
 
 @media (max-width:767px) { 
-    .bg-intro {
-        padding-top: 60px;
-    }
+	.bg-intro {
+	    text-align: center;
+	    min-height: 200px;
+	    padding-top: 120px;
+	}
 
-    .row-intro .btn-white {
-        margin-top: 10px;
-        margin-bottom: 40px;
-    }
+	.row-intro .btn-white {
+	    margin-top: 10px;
+	    margin-bottom: 40px;
+	}
 }
 
 @media (min-width:768px) { 
-    .title-intro {
-        margin-top: 16px;
-        font-size: 64px;
-        margin-bottom: 14px;
-    }
+	.title-intro {
+	    font-size: 36px;
+	    margin-bottom: 10px;
+	}
 
-    .subtitle-intro {
-        font-size: 22px;
-        margin-bottom: 24px;
-    }
+	.subtitle-intro {
+	    font-size: 16px;
+	    margin-bottom: 14px;
+	}
 }
 
 @media (min-width:992px) { 
-    .title-intro {
-        margin-top: 16px;
-        font-size: 64px;
-        margin-bottom: 14px;
-        font-weight: 700;
-    }
+	.title-intro {
+	    margin-top: 16px;
+	    font-size: 40px;
+	    margin-bottom: 14px;
+	}
 
-    .subtitle-intro {
-        font-size: 22px;
-        margin-bottom: 24px;
-    }
+	.subtitle-intro {
+	    font-size: 19px;
+	    margin-bottom: 24px;
+	}
 }
 
 @media (min-width:1200px) { 
-    .title-intro {
-        margin-top: 16px;
-        font-size: 64px;
-        margin-bottom: 14px;
-        font-weight: 700;
-    }
+	.title-intro {
+	    font-size: 46px;
+	    margin-bottom: 20px;
+	}
 
-    .subtitle-intro {
-        font-size: 26px;
-        line-height:40px;
-        margin-bottom: 24px;
-    }
+	.subtitle-intro {
+	    font-size: 24px;
+	    line-height: 40px;
+	}
+}
+
+/* FEATURES
+   ================================================== */
+
+.bg-features {
+    text-align: center
+}
+
+.row-features {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.col-features {
+    padding: 20px;
+    margin-bottom: 50px;
+    bottom: 0;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.title-features {
+    margin-top: 30px;
+    font-size: 28px;
+    letter-spacing: normal;
+}
+
+.p-features {
+    padding-top: 5px;
+    margin: 0 auto;
+    max-width: 190px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+@media (min-width:1200px) { 
+	.title-features {
+	    font-size: 32px
+	}
+
+	.p-features {
+	    max-width: 260px;
+	    font-size: 18px;
+	    line-height: 30px;
+	}
+}
+
+/* IPHONE
+   ================================================== */
+
+.row-iphone {
+    color: #ECF0F1;
+    padding-top: 50px;
+}
+
+.title-iphone {
+    color: #a1a9bb;
+    font-size: 30px;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.p-iphone {
+    color: #d2d6df;
+    font-size: 18px;
+    line-height: 33px;
+    margin-bottom: 20px;
+}
+
+.img-triangle {
+    display: block;
+    width: 60px;
+    margin: 0 auto;
+    margin-top: -4px;
+}
+
+.row-iphone img {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.iphone-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.iphone-icons {
+    position: absolute;
+    top: 35%;
+    left: 20.8%;
+}
+
+.iphone-icons .fa {
+    font-size: 30px;
+    width: 56px;
+    height: 56px;
+    padding-left: 8%;
+    padding-top: 8%;
+    margin-right: .4em;
+    margin-bottom: .98em;
+    color: #28D8B3;
+    background: #000;
+    /* The Fallback */
+    background-color: rgba(0,0,0,0.3);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.iphone-icons .fa:hover {
+    background-color: rgba(0,0,0,0.6)
+}
+
+.iphone-icons .fa:active {
+    background-color: rgba(0,0,0,0.9)
+}
+
+@media (max-width:767px) { 
+	.iphone-wrapper {
+	    margin: 0 auto;
+	    width: 220px;
+	}
+
+	.bg-iphone .btn-white {
+	    margin-bottom: 30px
+	}
+
+	.bg-iphone .tab-content {
+	    text-align: center
+	}
+}
+
+@media (min-width:768px) { 
+	
+}
+
+@media (min-width:992px) { 
+	.iphone-icons .fa {
+	    font-size: 44px;
+	    width: 76px;
+	    height: 76px;
+	}
+}
+
+@media (min-width:1200px) { 
+	.iphone-icons .fa {
+	    font-size: 52px;
+	    width: 90px;
+	    height: 90px;
+	}
+
+	.title-iphone {
+	    font-size: 38px;
+	    margin-bottom: 20px;
+	}
+
+	.p-iphone {
+	    font-size: 22px;
+	    line-height: 36px;
+	    margin-bottom: 30px;
+	}
 }
 
 /* SERVICES
@@ -1077,6 +1228,78 @@ a.btn-white:focus {
     color: #FFF;
 }
 
+/* BLOG
+   ================================================== */
+
+.row-blog {
+    margin-bottom: 120px
+}
+
+.col-blog {
+    padding-top: 0;
+    margin-bottom: 50px;
+}
+
+.col-blog img {
+    max-width: 100%
+}
+
+.title-blog {
+    margin-top: 26px;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: inherit;
+    text-transform: uppercase;
+}
+
+.date-blog {
+    margin-top: 14px;
+    max-width: 360px;
+    color: #979eaf;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 15px;
+}
+
+.p-blog {
+    max-width: 360px;
+    font-size: 17px;
+    line-height: 36px;
+    margin-bottom: 0;
+    padding-right: 20px;
+}
+
+@media (min-width:1200px) { 
+	.title-blog {
+	    margin-top: 28px
+	}
+
+	.date-blog {
+	    margin-top: 17px
+	}
+
+	.p-blog {
+	    font-size: 19px
+	}
+}
+
+/* BLOG-BTN
+   ================================================== */
+
+.col-blog .btn-flat {
+    font-weight: 600;
+    margin-top: 20px;
+    padding: 18px 28px;
+    border-bottom: solid 2px #25caa8;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    font-size: 16px;
+    text-transform: none;
+}
+
 /* QUOTE
    ================================================== */
 
@@ -1129,15 +1352,12 @@ a.btn-white:focus {
     font-size: 30px;
     letter-spacing: normal;
     font-weight: 700;
-    color: #FFF;
 }
 
 .team-subtitle {
     padding-top: 5px;
     margin: 0 auto;
-    max-width: 190px;
     font-size: 18px;
-    color: #FFF;
 }
 
 .bg-team hr {
@@ -1228,11 +1448,21 @@ a.btn-white:focus {
 
 .team-f {
     top: -40%;
-    left: 57%;
+    left: 39%;
+}
+
+.team-d {
+    padding-top: 8px;
+    top: 39%;
+    right: -40%;
 }
 
 .wrapper-team-pic:hover .team-t {
-    left: 19%
+    left: 12%
+}
+
+.wrapper-team-pic:hover .team-d {
+    right: 12%
 }
 
 .wrapper-team-pic:hover .team-f {
@@ -1251,7 +1481,11 @@ a.btn-white:focus {
 	}
 
 	.wrapper-team-pic:hover .team-t {
-	    left: 19%
+	    left: 14%
+	}
+
+	.wrapper-team-pic:hover .team-d {
+	    right: 14%
 	}
 
 	.team-f {
@@ -1269,12 +1503,16 @@ a.btn-white:focus {
 
 @media (min-width:992px) { 
 	.wrapper-team-pic:hover .team-t {
-	    left: 19%
+	    left: 12%
+	}
+
+	.wrapper-team-pic:hover .team-d {
+	    right: 12%
 	}
 
 	.team-f {
 	    top: -40%;
-	    left: 57%;
+	    left: 38%;
 	}
 
 	.team-icon {
@@ -1292,7 +1530,7 @@ a.btn-white:focus {
 
 	.team-f {
 	    top: -40%;
-	    left: 57%;
+	    left: 39.6%;
 	}
 }
 
@@ -1300,15 +1538,14 @@ a.btn-white:focus {
    ================================================== */
 
 .row-info {
-    font-weight: 400
+    font-weight: 400;
 }
 
 .col-info {
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 .row-info .fa {
-    margin-top: 16px;
     width: 30px;
     display: inline-block;
 }
@@ -1316,17 +1553,7 @@ a.btn-white:focus {
 .row-info .fa {
     font-size: 28px;
     color: #535A6C;
-    margin-top: 24px;
     width: 36px;
-}
-
-.col-info .fa-envelope {
-    font-size: 26px;
-    margin-top: 14px;
-}
-
-.col-info .fa-map-marker {
-    margin-top: 22px
 }
 
 .title-contact {
